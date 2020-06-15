@@ -96,15 +96,13 @@
 
 \section*{Ejemplos de gráficas}
 
-%------------------------------------------------
-
 \subsection*{Primera elección}
 
 \textit{Un gráfico está distorsionado si la representación visual que presenta no se condice con la representación numérica.}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \begin{center}
-	\includegraphics[width=0.7\columnwidth,keepaspectratio]{lanacion-plasticos.png}
+	\includegraphics[width=1\columnwidth,keepaspectratio]{lanacion-plasticos.png}
 	\caption*{Fuente: \href{https://www.lanacion.com.ar/sociedad/6-graficos-para-entender-el-problema-del-plastico-nid1968639}{Diario La Nación}}
 \end{center}
 \end{figure}
@@ -126,12 +124,14 @@ $$ \textbf{Factor de Mentira}\ = \dfrac{1210}{3042} \approx \boxed{0.39} $$
 
 Siendo que el factor de mentira es de $\textit{0.39} < 0.95$, se puede decir que el gráfico no está representando los datos adecuadamente. También se puede ver que como $log(0.39) < 0$ entonces se está incurriendo en un error por reducción.
 
+\newpage
 \subsection*{Segunda elección}
+
 \textit{En las series de tiempo monetarias, casi siempre es mejor usar unidades estandarizadas en lugar de nominales.}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \begin{center}
-	\includegraphics[width=0.7\columnwidth,keepaspectratio]{lanacion-salirio-minimo.png}
+	\includegraphics[width=0.75\columnwidth,keepaspectratio]{lanacion-salirio-minimo.png}
 	\caption*{Fuente: \href{https://www.lanacion.com.ar}{Diario La Nación}}
 \end{center}
 \end{figure}
@@ -143,6 +143,26 @@ Se muestra la variación del salario mínimo, vital y móvil a través de los ú
 
 \section*{La peor visualización del mundo}
 
+Para realizar la peor visualización se obtuvo un data set que contiene los datos acerca de robos de autos durante el mes de abril de 2020. Fuente: \href{https://datos.gob.ar/dataset/justicia-robos-recuperos-autos/archivo/justicia_c46fe6e0-6d29-4427-907e-d37c0d7c32c4}{Portal de datos de argentina}.
 
+\begin{figure}[ht]
+\begin{center}
+	\includegraphics[width=0.7\columnwidth,keepaspectratio]{peor_grafica-mod.png}
+	\caption*{Robos de auto por día hábil}
+\end{center}
+\end{figure}
+
+En el gráfico propuesto se puede ver la longitud de las barras representan cantidades completamentes diferentes tanto para los autos nacionales como para los importados. En los autos nacionales 23.2 cm. de una barra equivale a 65 autos, mientras que para los importados esa misma distancia corresponde a 24 autos. La cantidad tampoco se encuentra normalizada sobre el total del parque automotor, por lo que tampoco se podría distinguir si se roban más autos nacionales o no.
+
+La elección de colores es confusa ya que si bien se pude diferenciar uno del otro, resulta muy dificíl mirar el gráfico como un todo y poder sacar algún tipo de conclusión. El agregado de las líneas para marcar los descensos y ascensos tampoco ayudan a la interpretación. Las leyendas de las fechas sobre el eje x si bien se pueden leer estan dispuestas de una manera que confunden la pertenencia de las barras a las fechas. Por último sobre el eje y del lado izquierdo se indica que es la cantidad de autos robados que pertenecen solo a los autos nacionaeles, del lado derecho en cambio, hay que concluir que se trata de los autos importados.
+
+El gráfico también se realizó mucho más alargado que ancho para mostrar la vertiginosidad en las cantidades.
+
+Principios que no se cumplen en este gráfico son:
+\begin{itemize}
+	\item \textit{Debemos visualizar la variación en los datos, no en el diseño}.
+	\item \textit{La dimensión de los datos no puede ser superada por la dimensión del gráfico}.
+	\item \textit{Los gráficos no deben sacar los datos de contexto}.
+\end{itemize}
 
 \end{document}
