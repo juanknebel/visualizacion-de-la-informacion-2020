@@ -1,0 +1,118 @@
+[
+  {
+    "NodeID": 459381,
+    "Category": "Water and other public services"
+  },
+  {
+    "NodeID": 466907,
+    "Category": "Electricity"
+  },
+  {
+    "NodeID": 473173,
+    "Category": "Household furnishings"
+  },
+  {
+    "NodeID": 503218,
+    "Category": "Natural gas"
+  },
+  {
+    "NodeID": 503701,
+    "Category": "Miscellaneous"
+  },
+  {
+    "NodeID": 510031,
+    "Category": "Gifts"
+  },
+  {
+    "NodeID": 520660,
+    "Category": "Healthcare"
+  },
+  {
+    "NodeID": 523927,
+    "Category": "Restaurants"
+  },
+  {
+    "NodeID": 527449,
+    "Category": "Alcohol"
+  },
+  {
+    "NodeID": 536346,
+    "Category": "Home maintenance"
+  },
+  {
+    "NodeID": 537281,
+    "Category": "Housekeeping supplies"
+  },
+  {
+    "NodeID": 552988,
+    "Category": "Money income before taxes"
+  },
+  {
+    "NodeID": 567195,
+    "Category": "Personal insurance and pensions"
+  },
+  {
+    "NodeID": 571970,
+    "Category": "Reading"
+  },
+  {
+    "NodeID": 575030,
+    "Category": "Transportation"
+  },
+  {
+    "NodeID": 577992,
+    "Category": "Education"
+  },
+  {
+    "NodeID": 580426,
+    "Category": "Telephone services"
+  },
+  {
+    "NodeID": 589943,
+    "Category": "Lodging away from home"
+  },
+  {
+    "NodeID": 595298,
+    "Category": "Groceries"
+  },
+  {
+    "NodeID": 595581,
+    "Category": "Donations"
+  },
+  {
+    "NodeID": 606730,
+    "Category": "Entertainment"
+  },
+  {
+    "NodeID": 616315,
+    "Category": "Apparel and services"
+  },
+  {
+    "NodeID": 620120,
+    "Category": "Personal taxes"
+  },
+  {
+    "NodeID": 621924,
+    "Category": "Mortgage payments"
+  },
+  {
+    "NodeID": 630626,
+    "Category": "Rented dwellings"
+  },
+  {
+    "NodeID": 632961,
+    "Category": "Personal care products and services"
+  },
+  {
+    "NodeID": 640784,
+    "Category": "Tobacco"
+  },
+  {
+    "NodeID": 642329,
+    "Category": "Household operations"
+  },
+  {
+    "NodeID": 644226,
+    "Category": "Property taxes"
+  }
+]

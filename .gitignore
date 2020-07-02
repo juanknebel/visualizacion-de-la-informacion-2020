@@ -151,3 +151,6 @@ dmypy.json
 # BibTeX
 *.bbl
 *.blg
+
+# Large data
+CGCS-GraphData.csv
