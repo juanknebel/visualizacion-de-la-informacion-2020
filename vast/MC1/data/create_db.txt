@@ -1,0 +1,56 @@
+CREATE TABLE nodes (
+  id int NOT NULL,
+  node_type int NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE links (
+  source int NOT NULL,
+  e_type int NOT NULL,
+  target int NOT NULL,
+  time BIGINT,
+  weight DECIMAL(25,5),
+  source_location int,
+  target_location int,
+  source_latitude DECIMAL(10,5),
+  source_longitude DECIMAL(10,5),
+  target_latitude DECIMAL(10,5),
+  target_longitude DECIMAL(10,5)
+);
+
+CREATE TABLE edge_type (
+  id int NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE demographic_categories (
+  node_id int NOT NULL,
+  category VARCHAR(255) NOT NULL,
+  PRIMARY KEY (node_id)
+);
+
+CREATE TABLE node_type (
+  id int NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  used_in VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+SET GLOBAL local_infile=1;
+
+mysqlimport -h 127.0.0.1 -P 52000 --ignore-lines=1 --lines-terminated-by='\n' --fields-terminated-by=',' --fields-enclosed-by='"' --verbose --local -u root -proot vast nodes.csv
+
+mysqlimport -h 127.0.0.1 -P 52000 --ignore-lines=1 --lines-terminated-by='\n' --fields-terminated-by=',' --fields-enclosed-by='"' --verbose --local -u root -proot vast links.csv
+
+mysqlimport -h 127.0.0.1 -P 52000 --ignore-lines=1 --lines-terminated-by='\n' --fields-terminated-by=',' --fields-enclosed-by='"' --verbose --local -u root -proot vast edge_type.csv
+
+mysqlimport -h 127.0.0.1 -P 52000 --ignore-lines=1 --lines-terminated-by='\r\n' --fields-terminated-by=',' --fields-enclosed-by='"' --verbose --local -u root -proot vast demographic_categories.csv
+
+mysqlimport -h 127.0.0.1 -P 52000 --ignore-lines=1 --lines-terminated-by='\r\n' --fields-terminated-by=';' --fields-enclosed-by='"' --verbose --local -u root -proot vast node_type.csv
+
+CREATE INDEX idx_source ON links (source);
+
+CREATE INDEX idx_target ON links (target);
+
+mysql -h 127.0.0.1 -P 52000 -u root -proot vast
